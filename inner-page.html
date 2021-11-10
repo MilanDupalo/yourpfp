@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <title>Document</title>
   </head>
   <body>
@@ -19,7 +20,7 @@
 
         <p class="inner-page-info-text">
           Feel free to send me your comments, ideas and suit designs on Twitter
-          at <a href="https://www.twitter.com/msuiche">@msuiche</a> or on
+          at <a class="tag" href="https://www.twitter.com/msuiche">@msuiche</a> or on
           Discord.
         </p>
         
@@ -33,15 +34,15 @@
 
         <div class="icons-inner-page-info">
             <a href="https://www.twitter.com/msuiche">
-              <img class="social-icon" src="img/twitter.png" alt="" />
+                <i class="fab fa-twitter social-icon"></i>
             </a>
   
             <a href="https://www.twitter.com/mbsuiche">
-              <img class="social-icon" src="img/instagram.png" alt="" />
+                <i class="fab fa-instagram social-icon"></i>
             </a>
   
             <a href="https://discord.gg/ZRnT6TMPbU">
-              <img class="social-icon" src="img/discord.png" alt="" />
+                <i class="fab fa-discord social-icon"></i>
             </a>
           </div>
       </div>
@@ -56,30 +57,34 @@
           <div class="inner-page-form--content">
               <nav>
                   <ul>
-                      <li>
+                      <li class="nav-list-item">
                           <p>9933</p>
                           <p>items</p>
                       </li>
-                      <li>
+                      <li class="nav-list-item">
                           <p>4988</p>
                           <p>owners</p>
                       </li>
-                      <li>
+                      <li class="nav-list-item">
                           <p>5.65</p>
                           <p>floor price</p>
                       </li>
-                      <li>
+                      <li class="nav-list-item">
                           <p>53.614K</p>
                           <p>volume traded</p>
                       </li>
                   </ul>
               </nav>
+
+     <div class="form-description">
         <h1>Suit up your Cool Cat!</h1>
         <h2>#SuitUpForChristies</h2>
+    </div>
         <form>
         <div class="form-group">
-          <p>Enter your Cool Cat ID:</p>
+          <p class="form-title">Enter your Cool Cat ID:</p>
           <input
+          class="form-input"
             name="cat_id"
             id="cat_id"
             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -87,8 +92,11 @@
         </div>
 
         <div class="form-group">
-          <p>Suit type:</p>
-          <select name="suit_type" id="suit_type">
+          <p class="form-title">Suit type:</p>
+          <select name="suit_type" id="suit_type"  class="form-input"2>
+              <option value="">Marasaaa</option>
+              <option value="">Marasaaa</option>
+              <option value="">Marasaaa</option>
               <option value="">Marasaaa</option>
             <?php
                 foreach($config['suits'] as $suit) {
@@ -99,8 +107,22 @@
         </select>
         </div>
 
-        <input type="button" class='manu-btn' value="Suit up!" onclick="updateCat()" />
+        <input type="button" class='manu-btn form-btn' value="Suit up!" onclick="updateCat()" />
+        <div class="main_view">
+            <!-- <img class="output-img" src="<?=$config['logo'];?>" id="main" alt="SuitUp"> -->
+            <img class="output-img" src="img/cool-cat.png" alt="">
+            <input type="button"  class='manu-btn share-btn' value="Share on twitter!">
+        </div>
     </form>
+    <div class="donations">
+        <h3 class="donations-title">Donations :</h3>
+        <p class="donations-content">0xb8e9eBBA486DD64b046B1cC3c52b23E3103dBA13 (ETH)</p>
+        <p class="donations-content">tz1fJvrCoqckTtouFfigwAoV2oFLzvQ4fdfq (XTZ)</p>
+        <p class="donations-content">Cjk8VJbQVZZrmbJvktw9r8F2ShxCf1LJHk6JqRcYxwXM (SOL)</p>
+        <p class="donations-content">0xb8e9eBBA486DD64b046B1cC3c52b23E3103dBA13 (ETH)</p>
+        <p class="donations-content">tz1fJvrCoqckTtouFfigwAoV2oFLzvQ4fdfq (XTZ)</p>
+        <p class="donations-content">Cjk8VJbQVZZrmbJvktw9r8F2ShxCf1LJHk6JqRcYxwXM (SOL)</p>
+    </div>
 </div>
       </div>
     </div>
