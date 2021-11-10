@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="app.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bg">
+    <div class="inner-page">
+        <div class="inner-container">
+      <div class="inner-page-info">
+          <h2 class="inner-page-title">COOL CATS</h2>
+        <div class="inner-page-logo">
+          <img class="logo" src="img/cool-cat.png" alt="" />
+        </div>
+
+        <p class="inner-page-info-text">
+          Feel free to send me your comments, ideas and suit designs on Twitter
+          at <a href="https://www.twitter.com/msuiche">@msuiche</a> or on
+          Discord.
+        </p>
+        
+            <div class="manu">
+                <a class="manu-btn" href="">home</a>
+                <a class="manu-btn" href="">cool cats</a>
+                <a class="manu-btn" href="">Trippy bunny</a>
+                <a class="manu-btn" href="">koala agency</a>
+                <a class="manu-btn" href="">bulls on the block</a>
+            </div>
+
+        <div class="icons-inner-page-info">
+            <a href="https://www.twitter.com/msuiche">
+              <img class="social-icon" src="img/twitter.png" alt="" />
+            </a>
+  
+            <a href="https://www.twitter.com/mbsuiche">
+              <img class="social-icon" src="img/instagram.png" alt="" />
+            </a>
+  
+            <a href="https://discord.gg/ZRnT6TMPbU">
+              <img class="social-icon" src="img/discord.png" alt="" />
+            </a>
+          </div>
+      </div>
+
+      <div class="inner-page-form">
+          <div class="inner-page-form--bg">
+              <img class="bg-pic" src="img/gif.gif" alt="">
+              <img class="bg-pic" src="img/gif.gif" alt="">
+              <img class="bg-pic" src="img/gif.gif" alt="">
+          </div>
+
+          <div class="inner-page-form--content">
+              <nav>
+                  <ul>
+                      <li>
+                          <p>9933</p>
+                          <p>items</p>
+                      </li>
+                      <li>
+                          <p>4988</p>
+                          <p>owners</p>
+                      </li>
+                      <li>
+                          <p>5.65</p>
+                          <p>floor price</p>
+                      </li>
+                      <li>
+                          <p>53.614K</p>
+                          <p>volume traded</p>
+                      </li>
+                  </ul>
+              </nav>
+        <h1>Suit up your Cool Cat!</h1>
+        <h2>#SuitUpForChristies</h2>
+        <form>
+        <div class="form-group">
+          <p>Enter your Cool Cat ID:</p>
+          <input
+            name="cat_id"
+            id="cat_id"
+            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+          />
+        </div>
+
+        <div class="form-group">
+          <p>Suit type:</p>
+          <select name="suit_type" id="suit_type">
+              <option value="">Marasaaa</option>
+            <?php
+                foreach($config['suits'] as $suit) {
+                    echo '<option value="'.$suit['file'].'">'.$suit['name'].'</option>\r\n';
+                }
+            ?>
+            <!-- <option value="suit-white">Tuxedo (@BluuCatt)</option> -->
+        </select>
+        </div>
+
+        <input type="button" class='manu-btn' value="Suit up!" onclick="updateCat()" />
+    </form>
+</div>
+      </div>
+    </div>
+    </div>
+</div>
+  </body>
+</html>
